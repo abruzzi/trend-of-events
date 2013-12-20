@@ -8,15 +8,5 @@ define(['services/services'], function(services) {
                 })
             }
         }
-        
-        // return function() {
-        //     var delay = $q.defer();
-        //     $http.get('/settings.json').success(function(result) {
-        //         delay.resolve(result);
-        //     }).error(function(result) {
-        //         delay.reject(result);
-        //     });
-        //     return delay.promise;
-        // }
     }]);
 });

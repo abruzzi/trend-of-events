@@ -4,6 +4,7 @@ define(['controllers/controllers',
        ['$scope', 'SearchSettingService', function($scope, SearchSettingService) {
         SearchSettingService.setting().then(function(setting) {
             $scope.setting = setting;
-        })
+            $scope.currentVendor = setting.vendors[0];
+        });
    }]) 
 });

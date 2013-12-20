@@ -1,7 +1,12 @@
 <form action="" method="get">
     <label for="">Period</label>
     <input type="text" value="{{setting.period}}" />
+    
     <label for="">Date</label>
     <input type="text" value="{{setting.date}}" />
+    
+    <select ng-model="currentVendor" ng-options="vendor for vendor in setting.vendors"> 
+    </select>
+
     <input type="submit" name="" id="" value="submit" />
 </form>

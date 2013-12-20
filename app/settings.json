@@ -1,4 +1,5 @@
 {
     "period": "day",
-    "date": "Sat Dec 21 00:48:54 EST 2013"
+    "date": "Sat Dec 21 00:48:54 EST 2013",
+    "vendors": ["cisco", "huawei"]
 }
