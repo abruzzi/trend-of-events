@@ -10,4 +10,4 @@ define(['directives/directives'], function(directives) {
             });
         }
     })
-})
+});

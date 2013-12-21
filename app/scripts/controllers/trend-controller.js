@@ -24,7 +24,7 @@ define(['controllers/controllers',
                 options.series[0].data = values;
 
                 $scope.chartData = options;
-            })
+            });
         }]);
 });
 

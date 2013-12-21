@@ -17,16 +17,10 @@
     <input type="submit" value="search" />
 </div>
 
-<ul id="charts">
-    <li ng-click="toggleChart('Trend')">
-    <div class="chart-handle" enlargable="isHiddenTrendChart">
-            <h2>Trend</h2>
-        </div>
-    </li>
-    <li ng-click="toggleChart('VIP')">
-    <div class="chart-handle" enlargable="isHiddenVIPChart">
-            <h2>VIP</h2>
-        </div>
-    </li>
-</ul>
+<expander class="expander" expander-title="title">
+    <highchart value="chartData" type="line" width="300" height="200"/>
+</expander>
 
+<expander class="expander" expander-title="title">
+    <highchart value="chartData" type="line" width="300" height="200"/>
+</expander>
