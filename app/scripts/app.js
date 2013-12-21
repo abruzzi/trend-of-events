@@ -10,7 +10,6 @@ define(['angular',
   'directives/directives',
   'directives/hide-directive',
   'directives/expander-directive',
-  'directives/enlargable-directive',
   'directives/high-chart-directive'], function (angular) {
     'use strict';
     var app = angular.module('GeoApp', ['controllers', 'services', 'directives', 'ngRoute']);
