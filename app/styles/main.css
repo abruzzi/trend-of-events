@@ -1,3 +1,45 @@
 body {
   font-size: 1em;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navigator li{
+    display: inline-block;
+    margin-right: 6px;
+}
+
+.legend {
+    padding: 10px 0 10px 0;
+}
+
+#settings {
+    position: absolute;
+    background-color: #c9c9c9;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #004c97;
+}
+
+#trendChart {
+    background-color: #004c97;
+    width: 200px;
+    height: 200px;
+}
+
+#vipChart {
+    background-color: #400c97;
+    width: 200px;
+    height: 200px;
+}
+
+.chart-handle {
+    position: static;
+    background-color: #494949;
+    width: 100px;
+    height: 100px;
+}
