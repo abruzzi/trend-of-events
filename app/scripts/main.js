@@ -2,7 +2,9 @@ require.config({
   paths: {
     'angular': 'vendor/angular.min',
     'angular-route': 'vendor/angular-route.min',
-    'jquery': 'vendor/jquery'
+    'jquery': 'vendor/jquery',
+    'underscore': 'vendor/underscore',
+    'highcharts': 'vendor/highcharts'
   },
   shim: {
     'angular': {
@@ -11,6 +13,13 @@ require.config({
     },
     'angular-route': {
         deps: ['angular']
+    },
+    'underscore': {
+        exports: "underscore"
+    },
+    'highcharts': {
+        exports: "highcharts",
+        deps: ['jquery']
     }
   }
 });
