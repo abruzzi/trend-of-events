@@ -3,9 +3,15 @@ define(['services/services'], function(services) {
         ['$http', '$q', function($http, $q) {
         return {
             setting: function() {
-                return $http.get('/settings.json').then(function(result){
-                    return result.data;
-                })
+                var deferred = $q.defer();
+                
+                $http.get('/settings.json').success(function(result) {
+                    deferred.resolve(result);
+                }).error(function(result) {
+                    deferred.reject("network error");
+                });
+
+                return deferred.promise;
             }
         }
     }]);
