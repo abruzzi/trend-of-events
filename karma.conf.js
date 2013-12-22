@@ -21,14 +21,16 @@ module.exports = function(config) {
       {pattern: 'app/scripts/directives/*.js', included: false},
 
       {pattern: 'test/vendor/*.js', included: false},
-      {pattern: 'test/spec/**/*-spec.js', included: false}
+      {pattern: 'test/spec/**/*-spec.js', included: false},
+      'app/views/**/*.html'
     ],
 
+    preprocessors: {
+        'app/views/**/*.html': ['ng-html2js']
+    },
 
     // list of files to exclude
-    exclude: [
-      
-    ],
+    exclude: [],
 
 
     // test results reporter to use

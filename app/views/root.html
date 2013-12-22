@@ -4,7 +4,6 @@
     <li><a ng-href="/#/trend">Trends</a></li>
 </ul>
 
-
 <ul class="legend">
     <li ng-click="toggleIt()">settings</li>
 </ul>
@@ -14,7 +13,7 @@
     <input type="text" value="day" />
     <label for="">Date</label>
     <input type="text" value="2013-12-21" />
-    <input type="submit" value="search" />
+    <input type="submit" value="search" ng-click="toggleIt()"/>
 </div>
 
 <expander class="expander" expander-title="title">
@@ -23,4 +22,14 @@
 
 <expander class="expander" expander-title="title">
     <highchart value="chartData" type="area" width="300" height="200"/>
+</expander>
+
+<expander class="expander" expander-title="title">
+    <div class="settings" id="settings">
+        <label for="">Period</label>
+        <input type="text" value="day" />
+        <label for="">Date</label>
+        <input type="text" value="2013-12-21" />
+        <input type="submit" value="search" />
+    </div>
 </expander>
