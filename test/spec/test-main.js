@@ -11,7 +11,8 @@ requirejs.config({
     angular: 'vendor/angular.min',
     'angular-route': 'vendor/angular-route.min',
     jquery: 'vendor/jquery',
-    'angular-mocks': '../../test/vendor/angular-mocks'
+    'angular-mocks': '../../test/vendor/angular-mocks',
+    'highcharts': 'vendor/highcharts'
   },
 
   shim: {
@@ -20,7 +21,11 @@ requirejs.config({
       deps: ['jquery']
     },
     'angular-route': {deps: ['angular']},
-    'angular-mocks': {deps: ['angular']}
+    'angular-mocks': {deps: ['angular']},
+    'highcharts': {
+        exports: "highcharts",
+        deps: ['jquery']
+    }
   },
 
   // ask Require.js to load these files (all our tests)
