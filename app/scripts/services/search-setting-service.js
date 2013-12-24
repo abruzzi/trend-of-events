@@ -13,6 +13,6 @@ define(['services/services'], function(services) {
 
                 return deferred.promise;
             }
-        }
+        };
     }]);
 });

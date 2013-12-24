@@ -5,7 +5,7 @@ define(['angular',
         var element, scope;
         beforeEach(function() {
             module('directives');
-            module('app/views/expander.html');
+            module('views/expander.html');
 
             inject(function($compile, $rootScope) {
                 scope = $rootScope;
@@ -18,8 +18,7 @@ define(['angular',
 
         it("should generate an expander", function() {
             scope.$digest();
-            console.log(element.find('.title'));
-            expect(element.find('.title').text()).toEqual("great title for click");
+            expect(element.find('.title').text()).toContain("great title for click");
         });
     });        
-})
+});

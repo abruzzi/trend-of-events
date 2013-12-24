@@ -14,7 +14,6 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'test/spec/test-main.js',
       {pattern: 'app/scripts/vendor/*.js', included: false},
       {pattern: 'app/scripts/services/*.js', included: false},
       {pattern: 'app/scripts/controllers/*.js', included: false},
@@ -22,11 +21,17 @@ module.exports = function(config) {
 
       {pattern: 'test/vendor/*.js', included: false},
       {pattern: 'test/spec/**/*-spec.js', included: false},
-      'app/views/**/*.html'
+      'app/views/**/*.html',
+      'test/spec/test-main.js',
     ],
 
     preprocessors: {
         'app/views/**/*.html': ['ng-html2js']
+    },
+
+    ngHtml2JsPreprocessor: {
+        stripPrefix: 'app/',
+        requireJs: true
     },
 
     // list of files to exclude

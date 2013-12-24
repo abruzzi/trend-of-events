@@ -25,6 +25,6 @@ define(['angular',
                 it("should toggle hidden", function() {
                     scope.toggleIt();
                     expect(scope.isHidden).toBeFalsy();
-                })
+                });
             }); 
 });

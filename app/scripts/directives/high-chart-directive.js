@@ -31,6 +31,6 @@ define(['directives/directives', 'jquery', 'highcharts'], function(directives, j
                 new Highcharts.Chart(newSettings);
               });
             }
-        }
-    })
+        };
+    });
 });

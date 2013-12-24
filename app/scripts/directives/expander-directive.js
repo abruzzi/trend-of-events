@@ -15,6 +15,6 @@ define(['directives/directives'], function(directives) {
                     bodyElement.toggleClass('closed');
                 }
             }
-        }
-    })
+        };
+    });
 });

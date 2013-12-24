@@ -1,5 +1,3 @@
-'use strict';
-
 describe("index page", function() {
     beforeEach(function() {
         browser().navigateTo("/app/index.html");

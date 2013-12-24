@@ -8,6 +8,6 @@ define(['directives/directives'], function(directives) {
                     element.show();
                 }
             });
-        }
-    })
+        };
+    });
 });

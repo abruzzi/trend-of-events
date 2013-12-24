@@ -6,5 +6,5 @@ define(['controllers/controllers',
             $scope.setting = setting;
             $scope.currentVendor = setting.vendors[0];
         });
-   }]) 
+   }]);
 });
