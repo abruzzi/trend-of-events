@@ -8,15 +8,16 @@ requirejs.config({
   baseUrl: '/base/app/scripts',
 
   paths: {
-    angular: 'vendor/angular.min',
+    'angular': 'vendor/angular.min',
     'angular-route': 'vendor/angular-route.min',
-    jquery: 'vendor/jquery',
+    'jquery': 'vendor/jquery',
+    'jquery-ui': 'vendor/jquery-ui.min',
     'angular-mocks': '../../test/vendor/angular-mocks',
     'highcharts': 'vendor/highcharts'
   },
 
   shim: {
-    angular: {
+    'angular': {
       exports: 'angular',
       deps: ['jquery']
     },
@@ -24,6 +25,9 @@ requirejs.config({
     'angular-mocks': {deps: ['angular']},
     'highcharts': {
         exports: "highcharts",
+        deps: ['jquery']
+    },
+    'jquery-ui': {
         deps: ['jquery']
     }
   },

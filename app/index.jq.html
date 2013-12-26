@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html> <!-- Do not add ng-app here as we bootstrap AngularJS manually-->
+    <head>
+        <title>My jQuery App</title>
+        <meta charset="utf-8" />
+        <script src="scripts/vendor/jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/vendor/jquery-migrate.js" type="text/javascript" charset="utf-8"></script>
+        <script src="scripts/vendor/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+        <link rel="stylesheet" type="text/css" href="styles/jquery-ui.min.css">
+
+        <script type="text/javascript" charset="utf-8">
+            $(function() {
+                var defaultDate = new Date(2013, 10, 10); 
+                
+                function updateDate() {
+                    var current = $("#release-date").datepicker("getDate");
+                    $("#selected-date").text(current.toDateString()); 
+                }
+
+                $("#release-date").datepicker({
+                    inline: true,
+                    onClose: updateDate,
+                    onSelect: updateDate
+                });
+
+                $("#release-date").datepicker("setDate", defaultDate);
+            });
+</script>
+</head>
+<body class="home-page">
+
+    <div id="date-container">
+        <label for="release-date">Release date:</label>
+        <input type="text" id="release-date" />
+        <label for="selected-date">Selected date:</label>
+        <span id="selected-date"></span>
+    </div>
+
+</body>
+</html>

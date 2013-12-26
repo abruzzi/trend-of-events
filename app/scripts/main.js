@@ -3,6 +3,7 @@ require.config({
     'angular': 'vendor/angular.min',
     'angular-route': 'vendor/angular-route.min',
     'jquery': 'vendor/jquery',
+    'jquery-ui': 'vendor/jquery-ui.min',
     'underscore': 'vendor/underscore',
     'highcharts': 'vendor/highcharts'
   },
@@ -10,6 +11,9 @@ require.config({
     'angular': {
       deps: [ 'jquery'],
       exports: 'angular'
+    },
+    'jquery-ui': {
+      deps: ['jquery']
     },
     'angular-route': {
         deps: ['angular']

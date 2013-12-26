@@ -33,3 +33,13 @@
         <input type="submit" value="search" />
     </div>
 </expander>
+
+<div id="date-container">
+    <label for="release-date">Release date:</label>
+    <datepicker type="text" ng-model="defaultDate" id="release-date"/>
+
+    <label for="selected-date">Selected date:</label>
+    <span id="selected-date">{{defaultDate}}</span>
+
+    <input type="text" ng-model="defaultDate"/>
+</div>
