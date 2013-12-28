@@ -1,45 +1,36 @@
-define(['directives/directives', 'jquery', 'jquery-ui'], function(directives) {
+define(['directives/directives', 
+        'jquery', 
+        'jquery-ui'], function(directives) {
     'use strict';
     directives.directive('datepicker', function ($parse) {
        return {
           restrict: "E",
           replace: true,
-          transclude: false,
-          compile: function (element, attrs) {
-             var modelAccessor = $parse(attrs.ngModel);
-
-             var html = "<input type='text' id='" + attrs.id + "' >" +
-                "</input>";
-
-             var newElem = $(html);
-             element.replaceWith(newElem);
-
-             return function (scope, element, attrs, controller) {
-
-                var updateDate = function () {
-                   var date = new Date(element.datepicker("getDate"));
-
-                   scope.$apply(function (scope) {
-                      // Change bound variable
-                      modelAccessor.assign(scope, date);
-                   });
-
-                   element.blur();
-                };
-
-                element.datepicker({
-                   inline: true,
-                   onClose: updateDate,
-                   onSelect: updateDate
+          transclude: true,
+          scope: {
+            date: "="
+          },
+          template: "<input type='text' ng-transclude></input>",
+          link: function(scope, element, attrs) {
+            var updateDate = function() {
+                var date = element.datepicker("getDate");
+                scope.$apply(function() {
+                    scope.date = date;
                 });
+            };
 
-                scope.$watch(modelAccessor, function (val) {
-                   var date = new Date(val);
-                   element.datepicker("setDate", date);
-                });
+            $(element).datepicker({
+                inline: true,
+                onClose: updateDate,
+                onSelect: updateDate
+            });
 
-             };
-
+            $(element).datepicker("setDate", new Date(scope.date));
+            
+            scope.$watch('date', function(value) {
+                var date = new Date(value);
+                element.datepicker("setDate", date);
+            });
           }
        };
     });
