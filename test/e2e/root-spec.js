@@ -1,15 +1,16 @@
 describe("index page", function() {
     beforeEach(function() {
-        browser().navigateTo("/app/index.html");
-        sleep(1);
+        browser.get("http://localhost:9999/app/index.html");
     });
 
     it("should have navigator", function() {
         expect(element("#navigator")).toBeDefined();
     });
 
-    it("have events path", function() {
-        expect(browser().location().path()).toBe("/");
-    });
+    it("should have input box", function() {
+        element(by.css('.legend')).click();
+        expect(element(by.id('settings'))).toBeDefined();
+    })
+
 });
 

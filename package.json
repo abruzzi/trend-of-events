@@ -6,13 +6,13 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "grunt unit"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/abruzzi/trend-of-events.git"
   },
-  "author": "",
+  "author": "Juntao Qiu",
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/abruzzi/trend-of-events/issues"
@@ -38,6 +38,7 @@
     "karma-ng-html2js-preprocessor": "~0.1.0",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-watch": "~0.5.3",
-    "karma-coverage": "~0.1.4"
+    "karma-coverage": "~0.1.4",
+    "protractor": "~0.15.0"
   }
 }
