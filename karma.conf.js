@@ -26,7 +26,10 @@ module.exports = function(config) {
     ],
 
     preprocessors: {
-        'app/views/**/*.html': ['ng-html2js']
+        'app/views/**/*.html': ['ng-html2js'],
+        'app/scripts/services/*.js': ['coverage'],
+        'app/scripts/controllers/*.js': ['coverage'],
+        'app/scripts/directives/*.js': ['coverage']
     },
 
     ngHtml2JsPreprocessor: {
@@ -40,7 +43,12 @@ module.exports = function(config) {
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage'],
+
+    coverageReporter: {
+        type: 'html',
+        dir: 'coverage/'
+    },
 
 
     // web server port

@@ -14,7 +14,7 @@ define(['angular',
                     "period": "day", 
                     "date": "Sat Dec 21 00:48:54 EST 2013", 
                     "vendors": ["cisco", "huawei"] 
-                }
+                };
 
                 beforeEach(function() {
                     module('controllers');
@@ -49,6 +49,6 @@ define(['angular',
                     initController();
                     scope.$digest();
                     expect(scope.setting).toEqual(setting);
-                })
+                });
             }); 
         });
