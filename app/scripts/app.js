@@ -4,6 +4,7 @@ define(['angular',
   'services/services', 
   'controllers/controllers',
   'controllers/root-controller',
+  'controllers/login-controller',
   'controllers/event-controller',
   'controllers/search-setting-controller',
   'controllers/trend-controller',
@@ -29,6 +30,9 @@ define(['angular',
         }).when('/trend', {
           templateUrl: 'views/trend.html',
           controller: 'TrendController'
+        }).when('/login', {
+          templateUrl: 'views/login.html',
+          controller: 'LoginController'
         }).otherwise('/');
       }
     ]);

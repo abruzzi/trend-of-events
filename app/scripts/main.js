@@ -4,6 +4,7 @@ require.config({
     'angular-route': 'vendor/angular-route.min',
     'jquery': 'vendor/jquery',
     'jquery-ui': 'vendor/jquery-ui.min',
+    'jquery-i18n-properties': 'vendor/jquery.i18n.properties',
     'underscore': 'vendor/underscore',
     'highcharts': 'vendor/highcharts'
   },
@@ -14,6 +15,9 @@ require.config({
     },
     'jquery-ui': {
       deps: ['jquery']
+    },
+    'jquery-i18n-properties': {
+        deps: ['jquery']
     },
     'angular-route': {
         deps: ['angular']
